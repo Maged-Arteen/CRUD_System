@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+
+#img-product{
+    width: 100%;
+    border-radius: 15px;
+    height: 150px;
+    object-fit: contain;
+   
+}
+
+
+#Price_section span{ 
+    color: red;
+}
+
+.inner{
+    border: 2px solid #fff;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #ECF0F1 ;
+}
+
+.error{
+    color: red;
+    text-transform: capitalize;
+}
+
+.error::before{
+    content: '*';
+}
+
+#des_error{ 
+    text-transform: capitalize;
+    color: red;
+}
+
+#des_error::before{
+    content: '*';
+}

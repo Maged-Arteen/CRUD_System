@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <title>CRUDS System</title>
+</head>
+<body>
+    <section id="main" class=" container w-100 bg-primary bg-opacity-25 ">
+        <fieldset>
+            <legend>Products Managment System</legend>
+            <form action="" class="container d-flex flex-column p-2">
+               <div>
+                <input type="text" name="" id="pdt-name" class="form-control m-1 " oninput="validate()" placeholder="Enter Pdt name">
+                <p class="error d-none" id="error">
+                 Product name must be at least 2 char with no space at the end 
+                </p>
+               </div>
+                <input type="text" name="" id="pdt-cat" class="form-control m-1 " list="cat-list" autocomplete="off" placeholder="Enter Pdt category">
+                <datalist id="cat-list">
+                    <option >Food Processiong </option>
+                    <option >Refrigerators</option>
+                    <option >Air Conditioners</option>
+                    <option >Personal Care Tools</option>
+                </datalist>
+                <input type="number" name="" id="pdt-price" class="form-control m-1 " placeholder="Enter Pdt price">
+                <input type="text" name="" id="pdt-des" class="form-control m-1 " oninput="validate_des()" placeholder="Enter Pdt description">
+                <p id="des_error" class="d-none">
+                    description may be one word or more with no space at the end 
+                </p>
+                <input type="file" name="" id="pdt-img" class="form-control m-1 " accept="image/*" placeholder="Enter Pdt image">
+                <div id="btns" class="d-flex row justify-content-center">
+                    <button class="btn btn-primary w-25 mt-2 mx-2 " type="button" onclick="adding_pdt()" id="add">Add Product</button>
+                    <button class="btn btn-danger w-25 mt-2 d-none  " type="button" id="update" onclick="del_Update()">Update Product</button>
+                </div>
+              
+            </form>
+            <input type="search" name="" id="search-term" class="form-control p-2 mb-2 w-75 m-auto" oninput="search_pdt()" placeholder="Search By Product name...">
+        </fieldset>
+        <row class="mt-5 d-flex flex-row flex-wrap justify-content-center "  id="preview-pdts">
+           
+      
+        </row>
+
+    
+    </section>
+    <script src="./JS/main.js"></script>
+</body>
+</html>
